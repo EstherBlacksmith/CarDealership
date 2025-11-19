@@ -1,6 +1,6 @@
 public class ExportReportPrinter {
     public void printReport(Exportable exportable) {
-        System.out.println("Documento de exportación generado:");
+        System.out.println("Document of exportation generated:");
         System.out.println(exportable.getExportInfo());
     }
 }
