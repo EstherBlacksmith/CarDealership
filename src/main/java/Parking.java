@@ -2,6 +2,7 @@ import enums.CarType;
 import enums.FuelType;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -22,12 +23,12 @@ public class Parking {
     }
 
     public void addCar(Car... car) {
-        for (Car car1 : car) {
-            if (car == null) {
-                throw new IllegalArgumentException("Car cannot be null");
-            }
-            carList.add(car1);
+        if (car == null) {
+            throw new IllegalArgumentException("Car cannot be null");
         }
+
+
+        Collections.addAll(carList, car);
 
     }
 
