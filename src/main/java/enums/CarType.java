@@ -1,5 +1,5 @@
 package enums;
 
 public enum CarType {
-    BICICLE,MOTO,UTILITARY
+    BICICLE, MOTO, UTILITARY
 }

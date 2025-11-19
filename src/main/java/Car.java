@@ -5,24 +5,24 @@ import java.util.Objects;
 
 public abstract class Car {
     private final String brand;
-    private final String  model;
+    private final String model;
     private final FuelType fuelType;
     private final int fabricationYear;
     private final CarType carType;
 
     public Car(String brand, String model, FuelType fuelType, int fabricationYear, CarType carType) {
-        if(fabricationYear <= 0 ){
+        if (fabricationYear <= 0) {
             throw new RuntimeException("The year can't be zero or negative");
         }
 
         this.brand = Objects.requireNonNull(brand);
-        this.model =  Objects.requireNonNull(model);
-        this.fuelType =  Objects.requireNonNull(fuelType);
+        this.model = Objects.requireNonNull(model);
+        this.fuelType = Objects.requireNonNull(fuelType);
         this.fabricationYear = fabricationYear;
-        this.carType =  Objects.requireNonNull(carType);
+        this.carType = Objects.requireNonNull(carType);
     }
 
-    abstract String carDescription() ;
+    abstract String carDescription();
 
     public String getModel() {
         return model;
